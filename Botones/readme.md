@@ -3,7 +3,7 @@
 ![Portada](https://github.com/wdesigner-co/wdesigner-co/blob/main/img/20231015_1357122.gif)
 
 
-# Modelos de botones.Vereion 1.0
+# Modelos de botones. Version 1.0
 
 Aqui encontrará una biblioteca de modelos de botones para usar o tomar como referencia para el diseño web. Esta biblioteca se actualizará constantemente con nuevos modelos y variaciones. Cada modelo tiene una opción para uso primario y secundario (negativo).
 
@@ -13,7 +13,7 @@ Aqui encontrará una biblioteca de modelos de botones para usar o tomar como ref
 !CSS
 !JAVASCRIPT 
 
-## Tabla de contenidos
+## Tabla de contenido
 
 - BOTONES - todos los modelos en una sola página.
 - Botones básicos 
@@ -23,10 +23,9 @@ Aqui encontrará una biblioteca de modelos de botones para usar o tomar como ref
 - Botón estilo neomorphismo 
 
 
-
 ## Uso
 
-Para usar este proyecto, solo tienes que abrir el archivo `articulo.html` con tu navegador web preferido. Verás el modelo de artículo científico con las secciones y los comentarios orientativos. Puedes modificar el contenido del archivo con tu editor de código favorito, siguiendo las instrucciones y los ejemplos que se dan en cada sección. Recuerda que debes adaptar el código a tu tema, tu revista y estilo.
+Para usar este proyecto, solo tienes que abrir el archivo de su interés con tu navegador web preferido. Descargalo en tu dispositivo y puedes modificar el contenido del archivo con tu editor de código favorito.
 
 ## Contribución
 
