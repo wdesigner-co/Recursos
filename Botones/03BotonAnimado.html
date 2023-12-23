@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Botón Animado | con icono</title>
+  
+  <!-- SEO -->
+  <meta name="author" content="Web Design | Alejandro Villanueva">
+  <meta name="description" content="WDesigner | Alejandro Villanueva modelo de botón  animado, usando html, css y javascript">
+  <meta name="keywords" content="botón, call to action, cta, animado, icono, boton descargar, html, css, javascript">
+  
+  <!-- favicon -->
+  <link rel="icon" type="logoWD48x48.png" href="/favicon.png">
+  <!--Iconos fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ 
+  <style>
+    body {
+      margin: 0 auto;
+      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Boton Primario */
+    #button-primario {
+      margin-bottom: 20px;
+      width: 200px;
+      height: 48px;
+      background-color: blue;
+      color: white;
+      border: none;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+    #button-primario::before {
+      content: "\f019"; 
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      margin-right: 10px;
+      transition: transform 0.3s;
+    }
+    
+    /* Clase que se añade al botón al hacer clic */
+    #button-primario.clicked {
+      background-color: green;
+      color: white;
+    }
+    
+    /* Clase que se añade al icono al hacer clic */
+    #button-primario.clicked::before {
+      content: "\f00c";
+      transform: rotate(360deg);
+    }
+    
+    
+    /* Boton secundario */
+    #button-secundario {
+      width: 200px;
+      height: 48px;
+      background-color: white;
+      border: 1px solid blue;
+      color: blue;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+    #button-secundario::before {
+      content: "\f1d8"; /* Enviar \f1d8 <i class="fa-solid fa-paper-plane"></i> */
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      margin-right: 10px;
+      transition: transform 0.3s;
+    }
+    
+    /* Clase que se añade al botón al hacer clic */
+    #button-secundario.clicked {
+      background-color: green;
+      color: white;
+    }
+    
+    /* Clase que se añade al icono al hacer clic */
+    #button-secundario.clicked::before {
+      content: "\f00c"; /*  check f00c <i class="fa-solid fa-check"></i> */
+      transform: rotate(360deg);
+    }
+   
+  </style>
+</head>
+
+<body>
+  
+  <button id="button-primario">Descargar</button>
+  
+  <button id="button-secundario">Enviar</button>
+ 
+  
+  <script>
+    // Boton primario
+    
+    // Seleccionar el botón por su id
+    var button = document.getElementById("button-primario");
+    
+    // Añadir un evento de clic al botón
+    button.addEventListener("click", function() {
+      // Añadir la clase "clicked" al botón
+      button.classList.add("clicked");
+
+      // Cambiar el estilo del icono directamente
+      button.style.content = "\f00c";
+      button.style.transform = "rotate(360deg)";
+
+      // Cambiar el texto durante la animación
+      button.innerText = "Descargando...";
+
+      // Quitar la clase "clicked" y restablecer el estilo y texto después de 3 segundos
+      setTimeout(function() {
+        button.classList.remove("clicked");
+        button.style.content = "\f019";
+        button.style.transform = "rotate(0deg)";
+        button.style.backgroundColor = "blue"; 
+        button.innerText = "Descargar";
+      }, 3000);
+    });
+    
+    // Boton secundario
+    // Seleccionar el botón por su id
+    var buttonSecundario = document.getElementById("button-secundario");
+    
+    // Añadir un evento de clic al botón
+    buttonSecundario.addEventListener("click", function() {
+      // Añadir la clase "clicked" al botón
+      buttonSecundario.classList.add("clicked");
+
+      // Cambiar el estilo del icono directamente
+      buttonSecundario.style.content = "\f00c";
+      buttonSecundario.style.transform = "rotate(360deg)";
+
+      // Cambiar el texto durante la animación
+      buttonSecundario.innerText = "Enviando...";
+
+      // Quitar la clase "clicked" y restablecer el estilo y texto después de 3 segundos
+      setTimeout(function() {
+        buttonSecundario.classList.remove("clicked");
+        buttonSecundario.style.content = "\f1d8"; // download \f019
+        buttonSecundario.style.transform = "rotate(0deg)";
+        buttonSecundario.style.backgroundColor = "white";
+        buttonSecundario.style.color = "blue";// Restablecer el color original
+        buttonSecundario.innerText = "Enviar"; // Restablecer el texto original
+      }, 3000);
+    });
+  </script>
+</body>
+
+</html>
