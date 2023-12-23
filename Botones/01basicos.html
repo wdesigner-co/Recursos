@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+  <html lang="es">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Botón Básico</title>
+  
+    <!-- SEO -->
+    <meta name="author" content="Web Designer | Alejandro Villanueva">
+    <meta name="description" content="Recurso modelo de botón básico, primario y secundario o negativo, usando html y css ">
+    <meta name="keywords" content="botón, call to action, cta,  boton descargar, html, css, javascript">
+  
+    <!-- favicon -->
+    <link rel="icon" type="logoWD48x48.png" href="/favicon.png">
+  
+
+  <style>
+  body {
+      margin: 0 auto;
+      padding-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button {
+    margin: 10px;
+    width: 170px;
+    height: 48px;
+    border: none;
+    font-size: 18px;
+    font-weight: 900;
+  }
+  
+  .primario {
+    background: blue;
+    color: white;
+  }
+  
+  .negativo {
+    background: white;
+    color: blue;
+    border: 1px solid blue;
+  }
+  
+  
+  .primario:hover,.negativo:hover {
+    background-color: green;
+    color: white;
+    border: none;
+  }
+  
+  </style>
+</head>
+
+
+<body>
+  <main>
+    <article class="container">
+      <section class="basicos">
+        <button class="basicos primario">Descargar</button>
+        
+        <button class="basicos negativo">Enviar</button>
+        
+      </section>
+      
+    </article> 
+  </main>
+
+</body>
+</html>
